@@ -1,0 +1,655 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#">
+    <bib:Article rdf:about="#item_2025">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1941-0506"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Arth</foaf:surname>
+                        <foaf:givenName>Clemens</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pirchheim</foaf:surname>
+                        <foaf:givenName>Christian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ventura</foaf:surname>
+                        <foaf:givenName>Jonathan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schmalstieg</foaf:surname>
+                        <foaf:givenName>Dieter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepetit</foaf:surname>
+                        <foaf:givenName>Vincent</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2069"/>
+        <link:link rdf:resource="#item_2070"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>2D map</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Buildings</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Cameras</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>geo-localization</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>image registration</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Image segmentation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>kim2018</dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Mobile handsets</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>Outdoor AR</dc:subject>
+        <dc:subject>Prior Map</dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Simultaneous localization and mapping</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>SLAM</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Solid modeling</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Three-dimensional displays</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Instant Outdoor Localization and SLAM Initialization from 2.5D Maps</dc:title>
+        <dcterms:abstract>We present a method for large-scale geo-localization and global tracking of mobile devices in urban outdoor environments. In contrast to existing methods, we instantaneously initialize and globally register a SLAM map by localizing the first keyframe with respect to widely available untextured 2.5D maps. Given a single image frame and a coarse sensor pose prior, our localization method estimates the absolute camera orientation from straight line segments and the translation by aligning the city map model with a semantic segmentation of the image. We use the resulting 6DOF pose, together with information inferred from the city map model, to reliably initialize and extend a 3D SLAM map in a global coordinate system, applying a model-supported SLAM mapping approach. We show the robustness and accuracy of our localization approach on a challenging dataset, and demonstrate unconstrained global SLAM mapping and tracking of arbitrary camera motion on several sequences.</dcterms:abstract>
+        <dc:date>2015-11</dc:date>
+        <z:libraryCatalog>IEEE Xplore</z:libraryCatalog>
+        <dc:description>Conference Name: IEEE Transactions on Visualization and Computer Graphics</dc:description>
+        <bib:pages>1309-1318</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1941-0506">
+        <prism:volume>21</prism:volume>
+        <dc:title>IEEE Transactions on Visualization and Computer Graphics</dc:title>
+        <dc:identifier>DOI 10.1109/TVCG.2015.2459772</dc:identifier>
+        <prism:number>11</prism:number>
+        <dc:identifier>ISSN 1941-0506</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_2069">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2069/7164332.html"/>
+        <dc:title>IEEE Xplore Abstract Record</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ieeexplore.ieee.org/document/7164332/?arnumber=7164332</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-09 18:40:45</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_2070">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2070/Arth et al. - 2015 - Instant Outdoor Localization and SLAM Initializati.pdf"/>
+        <dc:title>IEEE Xplore Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&amp;arnumber=7164332&amp;ref=aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL3N0YW1wL3N0YW1wLmpzcD90cD0mYXJudW1iZXI9NzE2NDMzMg==</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-09 18:40:39</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="urn:isbn:978-1-901725-60-5">
+        <z:itemType>conferencePaper</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>ISBN 978-1-901725-60-5</dc:identifier>
+                <dc:title>Procedings of the British Machine Vision Conference 2017</dc:title>
+                <dc:identifier>DOI 10.5244/C.31.143</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>London, UK</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>British Machine Vision Association</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hirzer</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Roth</foaf:surname>
+                        <foaf:givenName>Peter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepetit</foaf:surname>
+                        <foaf:givenName>Vincent</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2140"/>
+        <dc:subject>AR</dc:subject>
+        <dc:title>Efficient 3D Tracking in Urban Environments with Semantic Segmentation</dc:title>
+        <dcterms:abstract>In this paper, we present a new 3D tracking approach for self-localization in urban environments. In particular, we build on existing tracking approaches (i.e., visual odometry tracking and SLAM), additionally using the information provided by 2.5D maps of the environment. Since this combination is not straightforward, we adopt ideas from semantic segmentation to ﬁnd a better alignment between the pose estimated by the tracker and the 2.5D model. Speciﬁcally, we show that introducing edges as semantic classes is highly beneﬁcial for our task. In this way, we can reduce tracker inaccuracies and prevent drifting, thus increasing the tracker’s stability. We evaluate our approach for two different challenging scenarios, also showing that it is generally applicable in different application domains and that we are not limited to a speciﬁc tracking method.</dcterms:abstract>
+        <dc:date>2017</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.bmva.org/bmvc/2017/papers/paper143/index.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 13:30:03</dcterms:dateSubmitted>
+        <bib:pages>143</bib:pages>
+        <bib:presentedAt>
+            <bib:Conference>
+               <dc:title>British Machine Vision Conference 2017</dc:title>
+            </bib:Conference>
+        </bib:presentedAt>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_2140">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2140/Hirzer et al. - 2017 - Efficient 3D Tracking in Urban Environments with S.pdf"/>
+        <dc:title>Hirzer et al. - 2017 - Efficient 3D Tracking in Urban Environments with S.pdf</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.bmva.org/bmvc/2017/papers/paper143/paper143.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 13:30:00</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="#item_2142">
+        <z:itemType>conferencePaper</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:title>2017 Joint Urban Remote Sensing Event (JURSE)</dc:title>
+                <dc:identifier>DOI 10.1109/JURSE.2017.7924573</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Armagan</foaf:surname>
+                        <foaf:givenName>Anil</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hirzer</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepetit</foaf:surname>
+                        <foaf:givenName>Vincent</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2145"/>
+        <link:link rdf:resource="#item_2143"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Buildings</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Cameras</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Image edge detection</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Image segmentation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Semantics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Three-dimensional displays</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Two dimensional displays</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Semantic segmentation for 3D localization in urban environments</dc:title>
+        <dcterms:abstract>We show how to use simple 2.5D maps of buildings and recent advances in image segmentation and machine learning to geo-localize an input image of an urban scene: We first extract the façades of the buildings and their edges from the image, and then look for the orientation and location that align a 3D rendering of the map with these segments. We discuss how to use a 3D tracking system to acquire the data required for training the segmentation method, the segmentation itself, and how we use the segmentations to evaluate the quality of the alignment.</dcterms:abstract>
+        <dc:date>2017-03</dc:date>
+        <z:libraryCatalog>IEEE Xplore</z:libraryCatalog>
+        <bib:pages>1-4</bib:pages>
+        <bib:presentedAt>
+            <bib:Conference>
+               <dc:title>2017 Joint Urban Remote Sensing Event (JURSE)</dc:title>
+            </bib:Conference>
+        </bib:presentedAt>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_2145">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2145/7924573.html"/>
+        <dc:title>IEEE Xplore Abstract Record</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ieeexplore.ieee.org/document/7924573/?arnumber=7924573</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:51:47</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_2143">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2143/Armagan et al. - 2017 - Semantic segmentation for 3D localization in urban.pdf"/>
+        <dc:title>IEEE Xplore Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&amp;arnumber=7924573&amp;ref=aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL3N0YW1wL3N0YW1wLmpzcD90cD0mYXJudW1iZXI9NzkyNDU3Mw==</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:51:39</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="#item_2146">
+        <z:itemType>document</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Google Patents</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pirchheim</foaf:surname>
+                        <foaf:givenName>Christian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ventura</foaf:surname>
+                        <foaf:givenName>Jonathan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schmalstieg</foaf:surname>
+                        <foaf:givenName>Dieter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Arth</foaf:surname>
+                        <foaf:givenName>Clemens</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepetit</foaf:surname>
+                        <foaf:givenName>Vincent</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_2147"/>
+        <link:link rdf:resource="#item_2144"/>
+        <dc:title>Zero-baseline 3d map initialization</dc:title>
+        <dc:date>2015-12-24</dc:date>
+        <z:libraryCatalog>Google Scholar</z:libraryCatalog>
+    </rdf:Description>
+    <bib:Memo rdf:about="#item_2147">
+       <rdf:value>&lt;p&gt;US Patent App. 14/743,990&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_2144">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2144/US20150371440A1.pdf"/>
+        <dc:title>US20150371440A1.pdf</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://patentimages.storage.googleapis.com/8d/86/27/3f97332ac334f9/US20150371440A1.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:51:44</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Patent rdf:about="https://patents.google.com/patent/US10546387B2/en">
+        <z:itemType>patent</z:itemType>
+        <z:inventors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hirzer</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Roth</foaf:surname>
+                        <foaf:givenName>Peter Michael</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Arth</foaf:surname>
+                        <foaf:givenName>Clemens</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepetit</foaf:surname>
+                        <foaf:givenName>Vincent</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </z:inventors>
+        <link:link rdf:resource="#item_2149"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>code</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>determining</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>image</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>pose</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>regions</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Pose determination with semantic segmentation</dc:title>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://patents.google.com/patent/US10546387B2/en</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:52:07</dcterms:dateSubmitted>
+        <z:country>US</z:country>
+        <z:assignee>Qualcomm Inc</z:assignee>
+        <z:issuingAuthority>United States</z:issuingAuthority>
+        <prism:number>US10546387B2</prism:number>
+        <z:filingDate>2017-09-08</z:filingDate>
+        <z:applicationNumber>US15699221</z:applicationNumber>
+        <dc:date>2020-01-28</dc:date>
+    </bib:Patent>
+    <z:Attachment rdf:about="#item_2149">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2149/Hirzer et al. - 2020 - Pose determination with semantic segmentation.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://patentimages.storage.googleapis.com/46/4d/33/f9b35d0586a180/US10546387.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:52:08</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="http://www.bmva.org/bmvc/2017/papers/paper009/index.html">
+        <z:itemType>conferencePaper</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>ISBN 978-1-901725-60-5</dc:identifier>
+                <dc:title>Procedings of the British Machine Vision Conference 2017</dc:title>
+                <dc:identifier>DOI 10.5244/C.31.9</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>London, UK</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>British Machine Vision Association</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Armagan</foaf:surname>
+                        <foaf:givenName>Anil</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hirzer</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Roth</foaf:surname>
+                        <foaf:givenName>Peter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepetit</foaf:surname>
+                        <foaf:givenName>Vincent</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2151"/>
+        <dc:title>Accurate Camera Registration in Urban Environments Using High-Level Feature Matching</dc:title>
+        <dcterms:abstract>We propose a method for accurate camera pose estimation in urban environments from single images and 2D maps made of the surrounding buildings’ outlines. Our approach bridges the gap between learning-based approaches and geometric approaches: We use recent semantic segmentation techniques for extracting the buildings’ edges and the façades’ normals in the images and minimal solvers [14] to compute the camera pose accurately and robustly. We propose two such minimal solvers: one based on three correspondences of buildings’ corners from the image and the 2D map and another one based on two corner correspondences plus one façade correspondence. We show on a challenging dataset that, compared to recent state-of-the-art [1], this approach is both, faster and more accurate.</dcterms:abstract>
+        <dc:date>2017</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.bmva.org/bmvc/2017/papers/paper009/index.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:52:50</dcterms:dateSubmitted>
+        <bib:pages>9</bib:pages>
+        <bib:presentedAt>
+            <bib:Conference>
+               <dc:title>British Machine Vision Conference 2017</dc:title>
+            </bib:Conference>
+        </bib:presentedAt>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_2151">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2151/Armagan et al. - 2017 - Accurate Camera Registration in Urban Environments.pdf"/>
+        <dc:title>Armagan et al. - 2017 - Accurate Camera Registration in Urban Environments.pdf</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.bmva.org/bmvc/2017/papers/paper009/paper009.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:52:48</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="https://openaccess.thecvf.com/content_cvpr_2017/html/Armagan_Learning_to_Align_CVPR_2017_paper.html">
+        <z:itemType>conferencePaper</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Armagan</foaf:surname>
+                        <foaf:givenName>Anil</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hirzer</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Roth</foaf:surname>
+                        <foaf:givenName>Peter M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepetit</foaf:surname>
+                        <foaf:givenName>Vincent</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2154"/>
+        <link:link rdf:resource="#item_2155"/>
+        <dc:title>Learning to Align Semantic Segmentation and 2.5D Maps for Geolocalization</dc:title>
+        <dc:date>2017</dc:date>
+        <z:libraryCatalog>openaccess.thecvf.com</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://openaccess.thecvf.com/content_cvpr_2017/html/Armagan_Learning_to_Align_CVPR_2017_paper.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:54:37</dcterms:dateSubmitted>
+        <bib:pages>3425-3432</bib:pages>
+        <bib:presentedAt>
+            <bib:Conference>
+                <dc:title>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition</dc:title>
+            </bib:Conference>
+        </bib:presentedAt>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_2154">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2154/Armagan et al. - 2017 - Learning to Align Semantic Segmentation and 2.5D M.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://openaccess.thecvf.com/content_cvpr_2017/papers/Armagan_Learning_to_Align_CVPR_2017_paper.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:54:39</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_2155">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2155/Armagan_Learning_to_Align_CVPR_2017_paper.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://openaccess.thecvf.com/content_cvpr_2017/html/Armagan_Learning_to_Align_CVPR_2017_paper.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:54:42</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_2157">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Armagan</foaf:surname>
+                        <foaf:givenName>Anil</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hirzer</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Roth</foaf:surname>
+                        <foaf:givenName>Peter M</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepetit</foaf:surname>
+                        <foaf:givenName>Vincent</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2156"/>
+        <dc:title>3D Localization in Urban Environments from Single Images</dc:title>
+        <dcterms:abstract>In this paper, we tackle the problem of geolocalization in urban environments overcoming the limitations in terms of accuracy of sensors like GPS, compass and accelerometer. For that purpose, we adopt recent ﬁndings in image segmentation and machine learning and combine them with the valuable information given by 2.5D maps of buildings. In particular, we ﬁrst extract the fac¸ades of buildings and their edges and use this information to estimate the orientation and location that best align an input image to a 3D rendering of the given 2.5D map. As this step builds on a learned semantic segmentation procedure, rich training data is required. Thus, we also discuss how the required training data can be efﬁciently generated via a 3D tracking system.</dcterms:abstract>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+        <bib:pages>2</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_2156">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2156/Armagan et al. - 3D Localization in Urban Environments from Single .pdf"/>
+        <dc:title>Armagan et al. - 3D Localization in Urban Environments from Single .pdf</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.tugraz.at/fileadmin/user_upload/Institute/ICG/Documents/team_lepetit/publications/armagan_aapr17.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-10 14:55:02</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+</rdf:RDF>
