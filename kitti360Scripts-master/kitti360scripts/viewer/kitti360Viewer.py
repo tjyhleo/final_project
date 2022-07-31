@@ -501,15 +501,17 @@ class Kitti360Viewer(QtWidgets.QMainWindow):
             else:
                 if not self.imagesSequence:
                     self.images = glob.glob( os.path.join( self.sequence , '*' + self.imageExt ) )
+                    # print(os.path.join( self.sequence , '*' + self.imageExt ))
+                    # print(self.images)
                     self.images.sort()
                     # filter out images without labels
-                    self.label_images = glob.glob(os.path.join(self.labelPath, "instance", "*.png"))
+                    self.label_images = glob.glob(os.path.join(self.labelPath,"image_00", "instance", "*.png"))
                     basenames = [os.path.basename(lb) for lb in self.label_images]
                     self.images = [fn for fn in self.images if os.path.basename(fn) in basenames]
                     self.imagesSequence = self.images
                 else:
                     self.images = self.imagesSequence
-
+                
                 print("Loaded %d images" % len(self.images))
             
             if self.currentFile in self.images:

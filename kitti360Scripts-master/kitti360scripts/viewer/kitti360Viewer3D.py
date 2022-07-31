@@ -41,6 +41,7 @@ except:
 #################
 
 # annotation helper
+sys.path.insert(0,"/home/jialin/Documents/FinalProject/kitti360Scripts-master")
 from kitti360scripts.helpers.annotation  import Annotation3D, Annotation3DPly, global2local
 from kitti360scripts.helpers.project     import Camera
 from kitti360scripts.helpers.labels      import name2label, id2label, kittiId2label
@@ -51,7 +52,7 @@ from kitti360scripts.helpers.ply         import read_ply
 class Kitti360Viewer3D(object):
 
     # Constructor
-    def __init__(self, seq=0, showStatic=True):
+    def __init__(self, seq=7, showStatic=True):
 
         # The sequence of the image we currently working on
         self.currentSequence   = ""
@@ -300,7 +301,8 @@ if __name__=='__main__':
 
     args = parser.parse_args()
 
-    v = Kitti360Viewer3D(args.sequence)
+    # v = Kitti360Viewer3D(args.sequence)
+    v = Kitti360Viewer3D(7)
 
     if args.mode=='bbox':
         v.loadBoundingBoxes()

@@ -33,6 +33,13 @@ class Camera:
         for frame, pose in zip(frames, poses): 
             pose = np.concatenate((pose, np.array([0.,0.,0.,1.]).reshape(1,4)))
             # consider the rectification for perspective cameras
+            ###############################################################
+            ###############################################################
+            #pose: GPS to world, camToPose: unrectified camera to GPS, R_rect:rectification matrix
+            # why matmul inv(R_rect) at the end? 
+            ################################################################
+            ###############################################################
+            #cam2world is a dictionary with frame as keys and transformation matrix (camera to world) as values
             if self.cam_id==0 or self.cam_id==1:
                 self.cam2world[frame] = np.matmul(np.matmul(pose, self.camToPose),
                                                   np.linalg.inv(self.R_rect))
@@ -42,40 +49,50 @@ class Camera:
             else:
                 raise RuntimeError('Unknown Camera ID!')
 
-
+    #converts points from world frame to camera frame 
     def world2cam(self, points, R, T, inverse=False):
         assert (points.ndim==R.ndim)
         assert (T.ndim==R.ndim or T.ndim==(R.ndim-1)) 
         ndim=R.ndim
+        #if array's dimension is 2, add 1 dimension at the beginning
         if ndim==2:
             R = np.expand_dims(R, 0) 
-            T = np.reshape(T, [1, -1, 3])
+            T = np.reshape(T, [1, -1, 3]) #add 1 dimension at the beginning and reshape T into Nx3 shape
             points = np.expand_dims(points, 0)
+        #if not inverse, T and R are translation and rotation that transforms points from world to camera frame
+        #if inverse, T and R transforms points from camera to world frame
+        #transpose of R is the inverse of R. Since the additional dimension is at the beginning, we can just ignore it,
+        #and switch dimension 1 and 2, which is transpose(0,2,1). 
+        
         if not inverse:
             points = np.matmul(R, points.transpose(0,2,1)).transpose(0,2,1) + T
         else:
             points = np.matmul(R.transpose(0,2,1), (points - T).transpose(0,2,1))
 
+        #if input array is 2d, get rid of the dimension added, so the output array is also 2d
         if ndim==2:
             points = points[0]
 
         return points
 
     def cam2image(self, points):
+        #this is implemented differently in different classes (perspective, fisheye), Camera is a father class
         raise NotImplementedError
 
     def load_intrinsics(self, intrinsic_file):
+        #this is implemented differently in different classes (perspective, fisheye), Camera is a father class
         raise NotImplementedError
     
-    #vertices are coordinates in world frame, this function converts it to image frame: project 3d point into 2d frames
+    #vertices are 3d coordinates in world frame, this function converts it to image frame: project 3d point into 2d frames
     def project_vertices(self, vertices, frameId, inverse=True):
 
-        # current camera pose (get the "R" and "T" to convert world frame to camera frame)
+        # current camera pose (get the "R" and "T" that converts camera frame to world frame)
         curr_pose = self.cam2world[frameId]
         T = curr_pose[:3,  3]
         R = curr_pose[:3, :3]
 
-        # convert points from world coordinate to local coordinate  (camera coordinate)
+        # convert points from world coordinate to local coordinate  (world frame to camera frame)
+        # since R and T are transformation from camera to world frame, inverse is True here
         points_local = self.world2cam(vertices, R, T, inverse)
 
         # perspective projection (convert camera frame to image frame)
@@ -96,7 +113,7 @@ class Camera:
 
 class CameraPerspective(Camera):
 
-    def __init__(self, root_dir, seq='2013_05_28_drive_0009_sync', cam_id=0):
+    def __init__(self, root_dir, seq='2013_05_28_drive_0000_sync', cam_id=0):
         # perspective camera ids: {0,1}, fisheye camera ids: {2,3}
         assert (cam_id==0 or cam_id==1)
 
@@ -141,19 +158,21 @@ class CameraPerspective(Camera):
         self.width, self.height = width, height
         self.R_rect = R_rect
 
-    #converts camera coordinates to image coordinates
+    #converts camera coordinates to image coordinates (u, v, depth)
     def cam2image(self, points):
+        #if points array has 2 dimensions, add one dimension at the beginning
         ndim = points.ndim
         if ndim == 2:
             points = np.expand_dims(points, 0)
-        # intrinsic matrix times points = position on image, points must be camera coordinates
+        # matmul(intrinsic matrix, points) = position on image, points are camera coordinates
         points_proj = np.matmul(self.K[:3,:3].reshape([1,3,3]), points)
         depth = points_proj[:,2,:]
         depth[depth==0] = -1e-6
         # normalised image coordinates
         u = np.round(points_proj[:,0,:]/np.abs(depth)).astype(np.int)
         v = np.round(points_proj[:,1,:]/np.abs(depth)).astype(np.int)
-
+        
+        #if input array is 2d, drop the added dimension so the output array is also 2d
         if ndim==2:
             u = u[0]; v=v[0]; depth=depth[0]
         return u, v, depth
@@ -184,7 +203,11 @@ class CameraFisheye(Camera):
         ''' camera coordinate to image plane '''
         points = points.T
         norm = np.linalg.norm(points, axis=1)
-
+        #######################################################################################
+        ########################################################################################
+        #why normalise it? I thought camera normalisation is to divide x,y by z
+        ########################################################################################
+        #######################################################################################
         x = points[:,0] / norm
         y = points[:,1] / norm
         z = points[:,2] / norm
@@ -219,8 +242,8 @@ if __name__=="__main__":
         kitti360Path = os.path.join(os.path.dirname(
                                 os.path.realpath(__file__)), '..', '..')
     
-    seq = 3
-    cam_id = 2 #!!!!!!!!!!!!fisheye camera
+    seq = 0
+    cam_id = 0
     sequence = '2013_05_28_drive_%04d_sync'%seq
     # perspective
     if cam_id == 0 or cam_id == 1:
@@ -237,6 +260,7 @@ if __name__=="__main__":
         # perspective
         if cam_id == 0 or cam_id == 1:
             image_file = os.path.join(kitti360Path, 'data_2d_raw', sequence, 'image_%02d' % cam_id, 'data_rect', '%010d.png'%frame)
+            print(image_file)
         # fisheye
         elif cam_id == 2 or cam_id == 3:
             image_file = os.path.join(kitti360Path, 'data_2d_raw', sequence, 'image_%02d' % cam_id, 'data_rgb', '%010d.png'%frame)
@@ -268,11 +292,10 @@ if __name__=="__main__":
                 points.append(np.asarray(obj3d.vertices_proj).T)
                 depths.append(np.asarray(obj3d.vertices_depth))
                 for line in obj3d.lines:
-                    #!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    #!!!!!!!!!!!!!!!!!!!!!!this line I don't understand!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    #!!!it's used to get uv and d, but I don't understand
-                    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    v = [obj3d.vertices[line[0]]*x + obj3d.vertices[line[1]]*(1-x) for x in np.arange(0,1,0.01)] 
+                    #interpolate line (we only have vertices, to visualise the line, we need to interpolate it)
+                    v = [obj3d.vertices[line[0]]*x + obj3d.vertices[line[1]]*(1-x) for x in np.arange(0,1,0.01)]
+                    
+                    #camera.project_vertices project 3dpoints into images
                     uv, d = camera.project_vertices(np.asarray(v), frame) #np.asarray(v) should be same as obj3d.vertices
                     #only plot points that are visible in the image (d>0, u and v in image frame)
                     mask = np.logical_and(np.logical_and(d>0, uv[0]>0), uv[1]>0)
